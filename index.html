@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<body>
+<p>MORNING CHALLENGE: Create a simple web application that uses the fs and http modules. Use http to create the server and fs to read your html file. Include vanilla ES6 js in a script tag at the bottom of your html file. Create a simple lottery game - user can select three numbers out of 50 - if any of their numbers match the random num they win</p>
+<input  class="betNum" id="numOne"type="number" max="50" min="1">
+<input  class="betNum" id="numTwo"type="number" max="50" min="1">
+<input  class="betNum" id="numThree"type="number" max="50" min="1">
+<button id="button">See if you get it!</button>
+<h6></h6>
+<!-- <script type="text/javascript"> -->
+<script type="text/javascript">
+
+document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("button").addEventListener("click", function(){
+ let numberOne =document.getElementById("numOne").value;
+ let numberTwo = document.getElementById("numTwo").value;
+ let numberThree = document.getElementById("numThree").value;
+ let winningNumber = Math.floor((Math.random() * (50) + 1)); // conditional statement to match the betting numbers to the randomized computer number
+
+ if(winningNumber==numberOne||winningNumber==numberTwo||winningNumber==numberThree){
+  console.log("you win");
+ }
+
+  else{
+    console.log("You lose");
+  }
+   console.log(winningNumber)
+  })
+ })
+</script>
+</script>
+</body>
+</head>
+</html>
